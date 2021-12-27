@@ -1,0 +1,12 @@
+server:
+  port: 7001
+
+message:
+  prefix: "Hi "
+  suffix: " Thanks"
+resilience4j:
+  retry:
+    instances:
+      hub-api:
+        maxRetryAttempts: 5
+        waitDuration: 2s
